@@ -1,0 +1,57 @@
+{
+ "build": "door_2x2.litematic",
+ "ticks": 40,
+ "inputs": [
+  {
+   "at": 0,
+   "action": "use",
+   "pos": [
+    0,
+    3,
+    2
+   ]
+  },
+  {
+   "at": 20,
+   "action": "use",
+   "pos": [
+    0,
+    3,
+    2
+   ]
+  }
+ ],
+ "expect": [
+  {
+   "by": 5,
+   "pos": [
+    4,
+    1,
+    1
+   ],
+   "is": "smooth_stone"
+  },
+  {
+   "from": 5,
+   "to": 19,
+   "pos": [
+    5,
+    2,
+    1
+   ],
+   "is": "smooth_stone"
+  },
+  {
+   "at": 26,
+   "pos": [
+    4,
+    1,
+    1
+   ],
+   "is": "air"
+  },
+  {
+   "settles": true
+  }
+ ]
+}

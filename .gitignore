@@ -1,0 +1,14 @@
+# Mojang jars, decompiled sources, JDK, worlds: never commit
+.cache/
+/oracle/build/
+/oracle/run/
+target/
+__pycache__/
+*.pyc
+*.so
+*.egg-info/
+.venv/
+/dist/
+/out/
+.DS_Store
+/data/blocks-*.json

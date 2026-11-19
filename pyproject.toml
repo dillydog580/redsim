@@ -1,0 +1,20 @@
+[build-system]
+requires = ["maturin>=1.7,<2"]
+build-backend = "maturin"
+
+[project]
+name = "redsim"
+version = "0.1.0"
+description = "Tick-exact headless simulator for Minecraft Java Edition 26.3 redstone"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+readme = "README.md"
+
+[project.scripts]
+redsim = "redsim.cli:main"
+
+[tool.maturin]
+manifest-path = "crates/redsim-py/Cargo.toml"
+python-source = "python"
+module-name = "redsim._redsim"
+features = ["pyo3/extension-module"]

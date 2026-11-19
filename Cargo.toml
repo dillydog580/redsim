@@ -1,0 +1,20 @@
+[workspace]
+resolver = "2"
+members = ["crates/redsim-core", "crates/redsim-py"]
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "unwind"
+debug = 1
+
+[profile.dev]
+opt-level = 1
+
+# build scripts (block table packing) run optimized in every profile
+[profile.release.build-override]
+opt-level = 3
+
+[profile.dev.build-override]
+opt-level = 3
